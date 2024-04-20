@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>Homepage CO2</title>
+    <link rel="icon"   href="co2_pic.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style type="text/css">
+        p { color: red; }
+        h1, h2 { color: rgb(20, 37, 170); }
+        table { font-size: 200%; }
+       </style>
+
+    <style type="text/css">
+      header { background-color: #afa; }
+      header nav ul { text-align: right; }
+      header nav ul li { display: inline; }
+
+      input {height: 1%;
+             margin: 1em ;
+             padding: 1em;
+             border-radius: 0.5em;
+             border: 2px solid red}
+
+      main {display: flex}
+      main nav { width: 40%;}
+      main menu {background-color: blueviolet; }
+      main ul li a {color: black; }
+      main ul h1 {color: black;}
+      main div#content{ width: 70%; background-color: #aff; }
+
+      table { font-size: larger; width: 60%;}
+      table thead {background-color: #aff; border-radius: 30%;}
+      table tbody {background-color: #faa;}
+ 
+      footer { background-color: #faa}
+      footer nav ul { text-align: center; }
+      footer nav ul li { display: inline;}
+
+        @media screen and (max-width: 767px) 
+        {
+         main { display: block; }
+         main nav, main div#content { width: 100%; }
+        }
+        @media screen and (min-width: 768px) and (max-width: 1023px)
+        {
+         main { display: block; }
+         main nav, main div#content { width: 100%; }
+        }
+  </style>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+          <ul>
+          <li>
+          <form>
+             <input type="text" name="suche" placeholder="Suche">
+          </form>
+          </li>
+          <li><a
+         href="https://www.instagram.com/WebAppStartup">Instagram</a></li>
+          <li><a
+         href="https://www.facebook.com/WebAppStartup">Facebook</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+          </ul>
+          </nav>
+      </header>
+
+   <main>
+    <div id="content">
+        <menu>
+       
+            <ul>
+               <h1>Menu</h1>
+               <li><a href="home.html">Homepage</a></li>
+               <li><a href="services.html">Unsere Leistungen</a></li>
+               <li><a href="products.html">Unsere Produkte</a></li>
+               <li><a href="prices.html">Unsere Preise</a></li>
+               <li><a href="about.html">Über uns</a></li>
+           </ul>
+        
+    </menu>
+
+    <section>
+        <h1>Willkommen auf der Homepage von CO2 daten</h1>
+          <p>
+            Wir verarbeiten CO2 daten
+          </p>
+          
+       </section>
+    
+       <table id="myTable">
+    
+        <thead>
+          <tr>
+           <th>Land</th>
+           <th>Unternehmen</th>
+           <th>CO-2</th>
+         </tr>
+        </thead>
+      <tbody>
+        <tr>
+          <td>Germany</td>
+          <td>Mercedes</td>
+          <td>300</td>
+      </tr>
+      <tr>
+        <td>Germany</td>
+        <td>VW</td>
+        <td>380</td>
+    </tr>
+      <tr>
+         <td>Belgium</td>
+         <td>Ferrari</td>
+         <td>400</td>
+      </tr>
+      <tr>
+        <td>China</td>
+        <td>Mazda</td>
+        <td>240</td>
+      </tr>
+      <tr>
+        <td>China</td>
+        <td>Toyota</td>
+        <td>270</td>
+      </tr>
+      <tr>
+        <td>France</td>
+        <td>Porsche</td>
+        <td>550</td>
+      </tr>
+      </tbody>
+    
+     </table>
+   </div>
+</main>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+  
+   <footer>
+    <nav>
+        <ul>
+            <li><a href="privacy.html">Rechtliche Hinweise</a></li>
+       </ul>
+    </nav>
+   </footer>
+
+   <script type="text/javascript">
+    document.querySelector("form").onsubmit = function() 
+    {
+    //Wert des Suche-Felds bestimmen
+    let suche = document.querySelector("input").value;
+
+    if (suche.length < 3) 
+    {
+     alert("zu kurzer Suchbegriff");
+    } 
+    else 
+    {
+      let h1 = document.querySelector("h1"); 
+      // kein injiezierter code ausführen
+      h1.innerText = "Menu"
+    }
+return false;
+}
+  </script>
+</body>
+
+<script src="function.js"></script>
+
+</html>
